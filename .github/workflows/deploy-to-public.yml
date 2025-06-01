@@ -17,8 +17,7 @@ jobs:
       - name: Copy files to public/
         run: |
           mkdir -p out/public
-          cp -r * out/public/
-          rm -rf out/public/.git*
+          rsync -av --exclude='out' --exclude='.git*' --exclude='.github' ./ out/public/
 
       - name: Push to main branch's /public folder
         uses: peaceiris/actions-gh-pages@v3
