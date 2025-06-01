@@ -19,10 +19,20 @@ jobs:
           mkdir -p out/public
           rsync -av --exclude='out' --exclude='.git*' --exclude='.github' ./ out/public/
 
-      - name: Push to main branch's /public folder
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
-          publish_dir: out
-          keep_files: true
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push to main:/public
+        run: |
+          git fetch origin main
+          git checkout main
+          mkdir -p public
+          rm -rf public/*
+          cp -r out/public/* public/
+          git add public
+          git commit -m "Update /public from public [skip ci]" || echo "No changes to commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
