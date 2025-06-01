@@ -1,0 +1,29 @@
+name: Deploy to /public
+
+on:
+  push:
+    branches:
+      - public 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Copy files to public/
+        run: |
+          mkdir -p out/public
+          cp -r * out/public/
+          rm -rf out/public/.git*
+
+      - name: Push to main branch's /public folder
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
+          publish_dir: out
+          keep_files: true
