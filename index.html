@@ -81,15 +81,15 @@
                 <a href="https://panzhy.com/">Zhuoyang Pan</a><sup>1,2</sup>&nbsp
               </span>
               <span class="author-block">
-                <a href="https://people.eecs.berkeley.edu/~kanazawa/">Boxiao Pan</a><sup>1</sup>&nbsp</span>
+                <a href="https://cs.stanford.edu/~bxpan/">Boxiao Pan</a><sup>1</sup>&nbsp</span>
               <span class="author-block">
-                <a href="https://hangg7.com/">Guandao Yang</a><sup>1</sup>
+                <a href="https://www.guandaoyang.com/">Guandao Yang</a><sup>1</sup>
               </span>
               <span class="author-block">
-                <a href="https://hangg7.com/">Adam W. Harley</a><sup>1</sup>
+                <a href="https://adamharley.com/">Adam W. Harley</a><sup>1</sup>
               </span>
               <span class="author-block">
-                <a href="https://hangg7.com/">Leonidas Guibas</a><sup>1</sup>
+                <a href="https://geometry.stanford.edu/?member=guibas">Leonidas Guibas</a><sup>1</sup>
               </span>
             </div>
             
@@ -300,7 +300,7 @@ tool for the automatic quantification of animal behavior.
           <br><br> -->
           <span class="title is-2 publication-title" style="font-size:1.5em;">Comparison</span><br><br>
           <span style="font-size:1.1em;">
-            We compare our method against state-of-the-art point trackers pips++, dino-tracker, and CoTracker3, SuperAnimal for quadrupeds, as well as a general-purpose pose estimator ViTPose. For a fair comparison, we also fine-tune these methods using the same strategy as ours, incorporating supervision with the provided annotations. Methods with this additional supervision are denoted as +sup(*) in the results.
+            We compare our method against state-of-the-art point trackers PIPS++ <a href="https://arxiv.org/abs/2307.15055">[1]</a>, Dino-Tracker <a href="https://arxiv.org/abs/2403.14548">[2]</a>, CoTracker3 <a href="https://arxiv.org/abs/2410.11831">[3]</a>, SuperAnimal <a href="https://www.nature.com/articles/s41467-024-48792-2">[4]</a> for quadrupeds, as well as a general-purpose pose estimator ViTPose <a href="https://arxiv.org/abs/2212.04246v3">[5]</a>. For a fair comparison, we also fine-tune these methods using the same strategy as ours, incorporating supervision with the provided annotations. Methods with this additional supervision are denoted as +sup(*) in the results.
             <!-- We compare our method with GART <a href="https://arxiv.org/abs/2311.16099">[1]</a> and GaussianAvatar <a href="https://arxiv.org/abs/2312.02134">[2]</a>, showing the rendered RGB and normal maps for each. Our approach produces more realistic and detailed results in terms of both texture and structure. -->
           </span>
           <br><br>
@@ -330,6 +330,56 @@ tool for the automatic quantification of animal behavior.
               </div>
             </div>
           </div>
+          <br><br>
+          <span class="title is-2 publication-title" style="font-size:1.5em;">Interactive Labeling Interface</span><br><br>
+          <span style="font-size:1.1em;">
+            <p>
+              We demonstrate labeling a goat sequence using our custom web interface.
+              The top shows our method, and the bottom shows manual frame-by-frame labeling.
+              Our approach significantly improves efficiency and reduces jitter compared to manual annotation and outperforms CoTracker3 <a href="https://arxiv.org/abs/2410.11831">[3]</a> without refinement in accuracy and stability.
+            </p>
+          </span>
+          <br><br>
+          <div class="video-comparison">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./video_assets/gui/cmp_final.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <!-- <video poster="" autoplay controls muted loop height="100%">
+              <source src="./video_assets/gui/manually_final.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
+            <!-- <div class="caption">
+              <strong>Top:</strong> Our method (CoTracker3 + TTO) &nbsp;&nbsp;&nbsp;
+              <strong>Bottom:</strong> Manual annotation
+            </div> -->
+          </div>
+          <!-- <div class="hero is-light is-small">
+            <div class="hero-body is-light">
+              <div id="results-carousel" class="carousel results-carousel">
+                <div class="item item-steve">
+                  <video poster="" autoplay controls muted loop height="100%">
+                    <source src="./video_assets/cmp/fly.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-chair-tp">
+                  <video poster="" autoplay controls muted loop height="100%">
+                    <source src="./video_assets/cmp/goat.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-chair-tp">
+                  <video poster="" autoplay controls muted loop height="100%">
+                    <source src="./video_assets/cmp/pig.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item item-chair-tp">
+                  <video poster="" autoplay controls muted loop height="100%">
+                    <source src="./video_assets/cmp/sheep.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div> -->
       </div>
     </div>
     </div>
