@@ -1,4 +1,4 @@
-# `PosePAL`: Pose annotation with Point tracking Assisted Labeling
+# `PosePAL`: <ins>Pose</ins> annotation with <ins>P</ins>oint tracking <ins>A</ins>ssisted <ins>L</ins>abeling
 **[Project page](https://zhuoyang-pan.github.io/animal-labeling/) &bull;
 [arXiv](https://arxiv.org/abs/2506.03868)**
 
