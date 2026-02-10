@@ -69,6 +69,7 @@ uvicorn main:app --reload
 ```
 npm start
 ```
+The labeled DAVIS-Animals dataset used in our paper is available [here](https://drive.google.com/drive/folders/1XRtGzBYj7HzlYkE0gp20Hv4hmFckHmhj?usp=sharing).
 
 ## Status
 
