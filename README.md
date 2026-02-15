@@ -69,7 +69,7 @@ uvicorn main:app --reload
 ```
 npm start
 ```
-The labeled DAVIS-Animals and sampled DeepFly3D dataset used in our paper is available [here](https://drive.google.com/drive/folders/1_TcfxsgxhEArSLk2vnE-f30Iu-d2Q0tI?usp=sharing).
+The labeled DAVIS-Animals and the sampled DeepFly3D dataset used in our paper are available [here](https://drive.google.com/drive/folders/1_TcfxsgxhEArSLk2vnE-f30Iu-d2Q0tI?usp=sharing).
 
 ## Status
 
